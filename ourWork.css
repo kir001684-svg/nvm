@@ -1,0 +1,201 @@
+/* Hero Section */
+.works-hero {
+  background: linear-gradient(rgba(21, 67, 96, 0.7), rgba(21, 67, 96, 0.7)), 
+              url('images/ourworks-hero.jpg') center/cover no-repeat;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.works-hero .hero-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.works-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.works-hero p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+/* Impact Summary */
+/* Impact Section */
+.impact {
+  background: #f9fafc;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.impact-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.impact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.impact-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff5722; /* Accent color */
+  margin-bottom: 10px;
+}
+
+.impact-card p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+/* Testimonial Section */
+.testimonial {
+  background: #E3F2FD;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonial-box {
+  max-width: 700px;
+  margin: auto;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.testimonial-box h4 {
+  margin-top: 1rem;
+  color: #154360;
+  font-weight: bold;
+}
+
+/* CTA Footer */
+.cta-footer {
+  background-color: #154360;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-footer p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background: #FDD835;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.5s;
+}
+
+.cta-button:hover {
+  background: #fbc02d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .impact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .works-hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta-footer h2 {
+    font-size: 1.5rem;
+  }                                                
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 95vw;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: calc(100vw - 60px);
+  height: 80vh;
+  margin: 0 15px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Navigation buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+.slider-btn.left {
+  left: 10px;
+}
+.slider-btn.right {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: 60vh;
+    min-width: calc(100vw - 40px);
+    margin: 0 10px;
+  }
+}

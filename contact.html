@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Nehru Vikas Manav Samiti</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="nav.css"/> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logb.png" alt="NGO Logo" class="ngo-logo">
+      <span>Nehru Vikas Manav Samiti</span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Our Works</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <!-- ✅ Contact Layout -->
+  <div class="contact-wrapper">
+    
+    <!-- ✅ Contact Form -->
+    <section class="form-section">
+      <div class="contact-header">
+        <h1>Get in Touch</h1>
+         
+        <p>Have questions, suggestions, or want to collaborate? We'd love to hear from you!</p>
+      </div>
+
+    <!-- ✅ Mobile logo (optional) -->
+    <img src="images/logb.png" alt="Logo" class="logo-mobile">
+
+     <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label><span>1</span> Full Name</label>
+          <input type="text" name="name"placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label><span>2</span> Email Address</label>
+          <input type="email"name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label><span>3</span> Your Message</label>
+          <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section >
+
+    <!-- ✅ Contact Info (inline with form) -->
+    <section class="info-section">
+      <img src="images/logb.png" alt="Logo" class="logo-desktop" />
+      <div class="contact-info">
+        <h4>Call Us</h4>
+        <p>+91 9458 973027<br>+91 4845 996738</p>
+
+        <h4>Email</h4>
+        <p>info@nvmngo.org<br>contact@nehruvikas.org</p>
+
+        <h4>Address</h4>
+        <p>
+          Nehru Vikas Manav Samiti<br>
+          2154 Glen Falls Road<br>
+          Plymouth Meeting,<br>
+          Pennsylvania (PA), 19462
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ✅ Navbar Toggle Script -->
+ <script src="script1.js"></script>
+
+ <script>
+   document.getElementById('contactForm').addEventListener('submit', async function(e) {
+     e.preventDefault();
+     
+     const formData = new FormData(this);
+     const data = {
+       name: formData.get('name'),
+       email: formData.get('email'),
+       message: formData.get('message')
+     };
+     
+     try {
+       const response = await fetch('http://localhost:5000/send', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(data)
+       });
+       
+       const result = await response.json();
+       
+       if (result.success) {
+         alert('Message sent successfully!');
+         this.reset();
+       } else {
+         alert('Failed to send message. Please try again.');
+       }
+     } catch (error) {
+       console.error('Error:', error);
+       alert('An error occurred. Please check if the server is running.');
+     }
+   });
+ </script>
+</body>
+</html>

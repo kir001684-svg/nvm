@@ -1,0 +1,3 @@
+- [x] Add JavaScript to contact.html for form submission via fetch to backend
+- [x] Create .env file in contact-backend/ with email credentials example
+- [x] Run the backend server and test form submission

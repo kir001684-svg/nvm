@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nehru Vikash Manav Samity</title>
+  <link rel="stylesheet" href="nav.css"/>
+  <link rel="stylesheet" href="ourWork.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+ <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logb.png" alt="NGO Logo" class="ngo-logo">
+      <span>Nehru Vikas Manav Samiti</span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Our Works</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+
+  <div class="page-content">
+
+
+<!-- Our Works Page -->
+<section class="works-hero">
+  <div class="hero-content">
+    <h1>Transforming Lives Through Action</h1>
+    <p>From rural classrooms to health camps and women's training programs — explore the change we'0   re driving across communities.</p>
+  </div>
+</section>
+
+<!-- Your Card Slider  -->
+ <div class="slider-wrapper">
+    <button class="slider-btn left" onclick="moveLeft()">&#10094;</button>
+
+    <div class="slider-container">
+      <div class="slider" id="slider">
+        <div class="slide" style="background-image: url('images/do1.jpg');"></div>
+        <div class="slide" style="background-image: url('images/a.jpg');"></div>
+        <div class="slide" style="background-image: url('images/a.jpg');"></div>
+      </div>
+    </div>
+
+    <button class="slider-btn right" onclick="moveRight()">&#10095;</button>
+  </div>
+
+<!-- Impact Summary Section -->
+<section class="impact">
+  <h2 class="impact-title">Our Impact</h2>
+  <div class="impact-container">
+    <div class="impact-card">
+      <h2 class="counter" data-target="500">0</h2>
+      <p>Children Educated</p>
+    </div>
+    <div class="impact-card">
+      <h2 class="counter" data-target="300">0</h2>
+      <p>Women Empowered</p>
+    </div>
+    <div class="impact-card">
+      <h2 class="counter" data-target="100">0</h2>
+      <p>Health Camps</p>
+    </div>
+    <div class="impact-card">
+      <h2 class="counter" data-target="50">0</h2>
+      <p>Communities Reached</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonial Section -->
+<section class="testimonial">
+  <div class="testimonial-box">
+    <p>“Thanks to the NGO, I now run my own tailoring shop and support my family with confidence and dignity.”</p>
+    <h4>— Shalini Devi, Empowered Woman</h4>
+  </div>
+</section>
+
+<!-- CTA Footer -->
+<section class="cta-footer">
+  <h2>Join Us in Making a Difference</h2>
+  <p>Every effort counts — help us reach more lives through your support.</p>
+  <a href="contact.html" class="cta-button">Get Involved</a>
+</section>
+
+
+  </div>
+  <script src="script1.js"></script>
+  <script src="slider.js"></script>
+</body>
+</html>  

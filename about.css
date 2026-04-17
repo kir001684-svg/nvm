@@ -1,0 +1,230 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #FDFDFD;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(rgba(0, 86, 179, 0.7), rgba(78, 161, 255, 0.7)), url('images/do1.jpg') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  position: relative;
+}
+
+.about-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #F2C94C;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #FFF;
+}
+
+/* Who We Are */
+.who-we-are {
+  padding: 4rem 2rem;
+  background-color: #fff6ed; /* Soft warm tone */
+  text-align: center;
+}
+
+.who-we-are h2 {
+  color: #0056B3;
+  margin-bottom: 1rem;
+}
+
+.who-we-are p {
+  max-width: 800px;
+  margin: auto;
+  color: #444;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  padding: 4rem 2rem;
+  background-color: #eaf1fa; /* Light blue background */
+}
+
+.mv-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.mv-card {
+  flex: 1 1 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  border-left: 6px solid #F2994A;
+}
+
+.mv-card h3 {
+  color: #F2994A;
+  margin-bottom: 1rem;
+}
+
+/* Founders Section */
+.founders {
+  padding: 4rem 2rem;
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
+.founders h2 {
+  color: #3CAF50;
+  margin-bottom: 2rem;
+}
+
+.founder-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.founder-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.founder-card h3 {
+  color: #0056B3;
+  margin: 1rem 0 0.5rem;
+}
+
+.founder-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Image wrapper with hover effect */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border: 5px solid #0056B3;
+}
+
+/* Hover effect */
+.image-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+/* Ideology text appears on hover */
+.ideology {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(217, 79, 79, 0.9); /* Deep red overlay */
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.7rem;
+  text-align: center;
+  transition: bottom 0.4s ease;
+  border-radius: 0 0 50% 50%;
+}
+
+.image-wrapper:hover .ideology {
+  bottom: 0;
+}
+
+/* Executive Committee Section */
+.executive-committee {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.executive-committee h2 {
+  color: #0056B3;
+  margin-bottom: 2rem;
+}
+
+.executive-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.executive-card {
+  width: 220px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.executive-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #3CAF50;
+  margin-bottom: 1rem;
+}
+
+.executive-card h3 {
+  margin: 0.5rem 0 0.2rem;
+  color: #0056B3;
+  font-size: 1.1rem;
+}
+
+.executive-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founder-grid,
+  .executive-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .founder-card,
+  .executive-card {
+    width: 90%;
+  }
+}

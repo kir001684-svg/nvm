@@ -1,0 +1,128 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #0056B3; /* Royal Blue */
+  color: white;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo section */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.ngo-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #F2C94C; /* Sun Yellow */
+  text-shadow: 0 0 4px #F2C94C;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .logo span {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .ngo-logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: linear-gradient(135deg, #0056B3, #4EA1FF);
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Optional: space for fixed menu */
+.page-content {
+  transition: margin-top 0.3s ease;
+}
+
+body.menu-open .page-content {
+  margin-top: 200px; /* Adjust if needed */
+}

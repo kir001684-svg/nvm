@@ -1,0 +1,170 @@
+/* Mobile-only logo */
+.logo-mobile {
+  display: none;
+  width: 70px;
+  margin: 1rem auto 0;
+}
+
+/* Contact Wrapper */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: #a4bdce; /* Soft sky blue from logo */
+  color: #333;
+}
+
+/* Contact Form Section */
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+}
+
+.contact-header {
+  margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #154360; /* Deep blue */
+}
+
+.contact-header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  font-size: 0.95rem;
+  color: #154360;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.contact-form label span {
+  background-color: #1565C0; /* Blue label */
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  margin-right: 8px;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #90CAF9; /* Light blue underline */
+  color: #333;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #0362c8; /* Bright yellow */
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #074388;
+}
+
+/* Contact Info Section */
+.info-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  background-color: #a4bdce; /* White background */
+  border-left: 4px solid#6ea7cd; /* Yellow accent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-desktop {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-info h4 {
+  color: #154360; /* Deep blue */
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: #154360;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FDD835;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .logo-mobile {
+    display: block;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
+
+  .info-section {
+    border-left: none;
+    border-top: 4px solid #6ea7cd;;
+    margin-top: 2rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
